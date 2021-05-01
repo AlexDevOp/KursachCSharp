@@ -1,0 +1,39 @@
+﻿<Window x:Class="Kursach.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursach"
+        mc:Ignorable="d"
+        Title="Курсовой проект" Height="450" Width="788" ResizeMode="NoResize">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="415" VerticalAlignment="Top" Width="780">
+            <TabControl.ContextMenu>
+                <ContextMenu HasDropShadow="True"/>
+            </TabControl.ContextMenu>
+            <TabItem Header="Дешифровка">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="SelectNewFile" Content="Расшифровать файл" HorizontalAlignment="Left" Margin="177,355,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.348,1.25" Click="OnSelectNewFileButtonClicked"/>
+                    <Button x:Name="SaveDecryptedText" Content="Сохранить дешифровку" HorizontalAlignment="Left" Margin="517,355,0,0" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.179,0.75" Click="OnSaveDecryptedTextButtonClicked"/>
+                    <TextBox x:Name="TextPanel" HorizontalAlignment="Left" Height="340" Margin="7,0,0,0" TextWrapping="Wrap" Text="Sample text&#xD;&#xA;" VerticalAlignment="Top" Width="770" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" IsReadOnly="True"/>
+                    <Button x:Name="ChangeKeyButton" Content="Сменить ключ" HorizontalAlignment="Left" Margin="357,355,0,0" VerticalAlignment="Top" Width="100" Click="OnChangeKeyButtonClicked"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Шифрование текстов">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-2,0">
+                    <TextBox x:Name="TextForEncryption" HorizontalAlignment="Left" Height="330" Margin="17,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="740" Text="Кручу-верчу-шифровать-хочу!"/>
+                    <Button x:Name="EncryptButton" Content="Зашифровать" HorizontalAlignment="Left" Margin="337,355,0,0" VerticalAlignment="Top" Width="120" Click="OnEncryptButtomClicked"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Шифрование документов">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-2,0">
+                    <Button x:Name="LoadDocumentButton" Content="Загрузить документ" HorizontalAlignment="Left" Margin="177,355,0,0" VerticalAlignment="Top" Width="120" Click="OnLoadDocumentButtonClicked" RenderTransformOrigin="0.458,0.5"/>
+                    <Button x:Name="EncryptDocumentButton" Content="Зашифровать текст" HorizontalAlignment="Left" Margin="337,355,0,0" VerticalAlignment="Top" Width="120" Click="OnEncryptDocumentButtonClicked"/>
+                    <Button x:Name="SaveDocumentButton" Content="Сохранить" HorizontalAlignment="Left" Margin="497,355,0,0" VerticalAlignment="Top" Width="80" Click="OnSaveDocumentButtonClicked"/>
+                    <TextBox x:Name="DocumentText" HorizontalAlignment="Left" Height="323" Margin="17,12,0,0" TextWrapping="Wrap" Text="Sample text" VerticalAlignment="Top" Width="740" IsReadOnly="True"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

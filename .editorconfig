@@ -1,0 +1,4 @@
+﻿[*.{cs,vb}]
+
+# IDE0017: Упростите инициализацию объекта
+dotnet_diagnostic.IDE0017.severity = none
